@@ -28,7 +28,6 @@ public class movementScript : MonoBehaviour
         {
             RespondToRotateInput();
             RespondToThrustInput();
-
         }
 
     }
@@ -53,14 +52,14 @@ public class movementScript : MonoBehaviour
     private void ManualRotate(float rotationthisframe)
     {
         rigidbody.freezeRotation = true; // take manual control of rotation
-        transform.Rotate(Vector3.forward * rotationthisframe);
+        transform.Rotate(Vector3.down * rotationthisframe);
         rigidbody.freezeRotation = false; // resume phisics control control of rotation
     }
 
     private void RespondToThrustInput()
     {
         float thrustthisframe = rcsthrust * Time.deltaTime;
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W))
         {
             applythrust(thrustthisframe);
         }
