@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - right_answer
+  - wrong_answer
   layers:
   - Default
   - TransparentFX

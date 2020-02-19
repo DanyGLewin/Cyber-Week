@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 12
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
@@ -62,7 +62,6 @@ LightmapSettings:
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
-    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -77,16 +76,10 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 512
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 256
-    m_PVREnvironmentReferencePointCount: 2048
-    m_PVRFilteringMode: 1
-    m_PVRDenoiserTypeDirect: 1
-    m_PVRDenoiserTypeIndirect: 1
-    m_PVRDenoiserTypeAO: 1
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVREnvironmentMIS: 1
+    m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -94,8 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ExportTrainingData: 0
-    m_TrainingDataDestination: TrainingData
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -131,6 +123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wrong Answer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651275955948038480, guid: d1cc5d43cf9da49249873972ad592ddd,
+        type: 3}
+      propertyPath: m_TagString
+      value: wrong_answer
       objectReference: {fileID: 0}
     - target: {fileID: 2655966574978680653, guid: d1cc5d43cf9da49249873972ad592ddd,
         type: 3}
@@ -200,6 +197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wrong Answer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651275955948038480, guid: d1cc5d43cf9da49249873972ad592ddd,
+        type: 3}
+      propertyPath: m_TagString
+      value: wrong_answer
       objectReference: {fileID: 0}
     - target: {fileID: 2655966574978680653, guid: d1cc5d43cf9da49249873972ad592ddd,
         type: 3}
@@ -394,8 +396,55 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 662471763, guid: 5e174a14abe9f47d3816040d4e357832, type: 3}
+      propertyPath: m_Mass
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 662471763, guid: 5e174a14abe9f47d3816040d4e357832, type: 3}
+      propertyPath: m_Drag
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 662471764, guid: 5e174a14abe9f47d3816040d4e357832, type: 3}
+      propertyPath: m_Size.y
+      value: 3.965557
+      objectReference: {fileID: 0}
+    - target: {fileID: 662471764, guid: 5e174a14abe9f47d3816040d4e357832, type: 3}
+      propertyPath: m_Center.y
+      value: 2.2132235
+      objectReference: {fileID: 0}
+    - target: {fileID: 662471764, guid: 5e174a14abe9f47d3816040d4e357832, type: 3}
+      propertyPath: m_Size.x
+      value: 4.632865
+      objectReference: {fileID: 0}
+    - target: {fileID: 662471764, guid: 5e174a14abe9f47d3816040d4e357832, type: 3}
+      propertyPath: m_Center.x
+      value: 0.15900469
+      objectReference: {fileID: 0}
+    - target: {fileID: 662471761, guid: 5e174a14abe9f47d3816040d4e357832, type: 3}
+      propertyPath: rcsthrust
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e174a14abe9f47d3816040d4e357832, type: 3}
+--- !u!1 &1518915632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1818099004820090908, guid: 5e174a14abe9f47d3816040d4e357832,
+    type: 3}
+  m_PrefabInstance: {fileID: 662471759}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1518915638
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518915632}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23000215, y: 0.087780915, z: 0.19431528}
+  m_Center: {x: 0.23017667, y: 0.02360603, z: -0.0008425807}
 --- !u!1001 &2122370100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -689,6 +738,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Answer
       objectReference: {fileID: 0}
+    - target: {fileID: 7111749054234213226, guid: 71357908a2bca44e29a8dc765e1b19ce,
+        type: 3}
+      propertyPath: m_TagString
+      value: right_answer
+      objectReference: {fileID: 0}
     - target: {fileID: 7111749054234213227, guid: 71357908a2bca44e29a8dc765e1b19ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -757,6 +811,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wrong Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651275955948038480, guid: d1cc5d43cf9da49249873972ad592ddd,
+        type: 3}
+      propertyPath: m_TagString
+      value: wrong_answer
       objectReference: {fileID: 0}
     - target: {fileID: 2655966574978680653, guid: d1cc5d43cf9da49249873972ad592ddd,
         type: 3}
