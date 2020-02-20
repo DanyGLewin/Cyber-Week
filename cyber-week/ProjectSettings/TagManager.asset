@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Obstacle
+  - right_answer
+  - wrong_answer
   layers:
   - Default
   - TransparentFX
