@@ -80,6 +80,7 @@ public class movementScript : MonoBehaviour
             switch (collision.gameObject.tag)
             {
                 case "right_answer":
+                    print ("landing");
                     Landing();
                     break;
                 case "wrong_answer":
@@ -109,9 +110,9 @@ public class movementScript : MonoBehaviour
 
     private void loadnextscene()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;// gives you current scene index
         int nextSceneIndex;
-        int lastScene = SceneManager.sceneCountInBuildSettings - 1;
+        int lastScene = SceneManager.sceneCountInBuildSettings - 1; // gives you number of levels -1
         if (currentSceneIndex == lastScene)
             nextSceneIndex = 0;
         else
@@ -120,7 +121,7 @@ public class movementScript : MonoBehaviour
     }
     private void loadPreviousScene()
     {
-        int previousSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
+        int previousSceneIndex = SceneManager.GetActiveScene().buildIndex-1;
         SceneManager.LoadScene(previousSceneIndex);
     }
 
