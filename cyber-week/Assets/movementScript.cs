@@ -52,7 +52,7 @@ public class movementScript : MonoBehaviour
     private void ManualRotate(float rotationthisframe)
     {
         rigidbody.freezeRotation = true; // take manual control of rotation
-        transform.Rotate(Vector3.down * rotationthisframe);
+        transform.Rotate(Vector3.forward * rotationthisframe);
         rigidbody.freezeRotation = false; // resume phisics control control of rotation
     }
 
