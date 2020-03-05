@@ -26,10 +26,18 @@ public class movementScript : MonoBehaviour
     {
         if (state == State.Alive)
         {
+            FixRotationPosition();
             RespondToRotateInput();
             RespondToThrustInput();
         }
 
+    }
+
+    private void FixRotationPosition()
+    {
+        // transform.rotation = transform.rotation * Quaternion.Euler(0, 0, 1); // keep z coordinates; set x, y to 0
+//        transform.rotation = Quaternion.Euler(0, 0, transform.rotation.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     private void RespondToRotateInput()
