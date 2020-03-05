@@ -55,6 +55,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -178,8 +179,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4111347, y: 3.547855, z: 1}
-  m_Center: {x: -0.20556748, y: 1.32, z: 0}
+  m_Size: {x: 1.4111347, y: 3.547855, z: 0.1}
+  m_Center: {x: -0.20556748, y: 1.32, z: 0.5}
 --- !u!65 &8333226328297519551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -191,8 +192,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5411637, y: 1.6808555, z: 1}
-  m_Center: {x: 1.2905306, y: 0.23117888, z: 0}
+  m_Size: {x: 1.5411637, y: 1.6808555, z: 0.1}
+  m_Center: {x: 1.2905306, y: 0.23117888, z: 0.5}
 --- !u!65 &8333226328297519548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -204,5 +205,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4424881, y: 1.6790497, z: 1}
-  m_Center: {x: -1.6482542, y: 0.23571122, z: 0}
+  m_Size: {x: 1.4424881, y: 1.6790497, z: 0.1}
+  m_Center: {x: -1.6482542, y: 0.23571122, z: 0.5}
