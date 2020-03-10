@@ -9,7 +9,6 @@ public class movementScript : MonoBehaviour
     [SerializeField] float rcsrotate = 100f; // rcs= reaction control system
     [SerializeField] float rcsthrust = 100f; // rcs= reaction control system
     [SerializeField] float levelLoadDelay = 2f;
-    [SerializeField] float zrotation;
 
     Rigidbody rigidbody;
 
@@ -38,10 +37,9 @@ public class movementScript : MonoBehaviour
     {
         float ms = Time.time % 1;
         if (ms < 0.1) {
-            print("fix");
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-            zrotation = transform.rotation.eulerAngles.z;
-            transform.rotation = Quaternion.Euler(0, 0, zrotation);
+            float zRotation = transform.rotation.eulerAngles.z;
+            transform.rotation = Quaternion.Euler(0, 0, zRotation);
         }
         
     }
