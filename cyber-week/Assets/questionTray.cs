@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Web.Script.Serialization;
 using UnityEngine;
 
 public class questionTray : MonoBehaviour
@@ -8,13 +9,22 @@ public class questionTray : MonoBehaviour
     [SerializeField] GameObject tab;
     [SerializeField] GameObject body;
 
-    [SerializeField] bool isOpen;
+    [SerializeField] GameObject redPlatform;
+    [SerializeField] GameObject greenPlatform;
+    [SerializeField] GameObject bluePlatform;
+    [SerializeField] GameObject yellowPlatform;
 
     // Start is called before the first frame update
     void Start()
     {
-        isOpen = false;
-        BoxCollider2D collider = gameObject.GetComponent<BoxCollider2D>();
+        loadQuestionsToObject();
+    }
+
+    void loadQuestionsToObject()
+    {
+        string text = System.IO.File.ReadAllText("questions.json");
+        print(text);
+        // var serializer = new JavaScriptSerializer();
     }
 
     // Update is called once per frame
@@ -26,14 +36,11 @@ public class questionTray : MonoBehaviour
         }
     }
 
-    void toggleOpen()
+    public void toggleOpen()
     {
+        
         toggleActive(tab);
         toggleActive(body);
-    }
-
-    void OnMouseDown() {
-        toggleOpen();
     }
 
     void toggleActive(GameObject gameObject)
