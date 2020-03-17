@@ -865,10 +865,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tab: {fileID: 252105452239030008}
   body: {fileID: 35215335171312052}
-  redPlatform: {fileID: 0}
-  greenPlatform: {fileID: 0}
-  bluePlatform: {fileID: 0}
-  yellowPlatform: {fileID: 0}
+  questionBox: {fileID: 7407827530760502080}
+  optionBoxes:
+  - {fileID: 7407827532338405099}
+  - {fileID: 7407827531192258773}
+  - {fileID: 7407827532321658650}
+  - {fileID: 7407827532118092432}
+  platforms:
+  - {fileID: 4469739106741051800, guid: 81c0f41121b03495193076db608e06c0, type: 3}
+  - {fileID: 2995375959213640305, guid: d52b7794edae149ea8e4a2e2890c5e2c, type: 3}
+  - {fileID: 4175458365145609047, guid: 2ce29b2b8d2e3496b8910d86977a43fa, type: 3}
+  - {fileID: 913309970739561126, guid: 78e507c469b34446cbcc82007e1ba94b, type: 3}
 --- !u!61 &537905621
 BoxCollider2D:
   m_ObjectHideFlags: 0

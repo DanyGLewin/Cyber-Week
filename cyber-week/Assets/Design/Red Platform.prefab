@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5252636406761801874}
   m_Layer: 0
   m_Name: Red Platform
-  m_TagString: Untagged
+  m_TagString: wrong_answer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
