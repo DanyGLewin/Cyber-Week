@@ -23,7 +23,6 @@ public class projectile : MonoBehaviour
         transform.position = transform.position + movementvector*Time.deltaTime;
         if (transform.position.x <= xBorder)
         {
-            print(transform.position);
             transform.position = startingPos;
         }
 

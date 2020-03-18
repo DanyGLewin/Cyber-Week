@@ -1,0 +1,11 @@
+{
+        "questionText": "second question",
+        "rightAnswer":  "apple",
+        "allAnswers" :
+        [
+                "pineapple",
+                "apple",
+                "orange",
+                "papaya"
+        ]
+}

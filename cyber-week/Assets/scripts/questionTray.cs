@@ -2,9 +2,10 @@
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
-// using System.Web.Script.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using Newtonsoft.Json;
 
 public class questionTray : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class questionTray : MonoBehaviour
     string tagRight = "right_answer";
     string tagWrong = "wrong_answer";
 
+    int currentQuestionNumber;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,13 +37,23 @@ public class questionTray : MonoBehaviour
 
     void loadQuestionsToObject()
     {
-        string text = System.IO.File.ReadAllText("questions.json");
-        print(text);
-        // var serializer = new JavaScriptSerializer();
-        string questionText = "Second question";
-        string rightAnswer = "Apple";
-        string[] allAnswers = new string[] { "Apple", "Pineapple", "Orange", "Papaya" };
+        string text = System.IO.File.ReadAllText("list.json");
+        QuestionList questionList = QuestionList.CreateFromJSON(text);
+        
+        currentQuestionNumber = SceneManager.GetActiveScene().buildIndex;
+        int index = currentQuestionNumber * 5;
+
+        string questionText = questionList.allQuestions[index];
+        string rightAnswer = questionList.allQuestions[index + 1];
+        string[] allAnswers = new string[4];
+        Array.Copy(questionList.allQuestions, index + 1, allAnswers, 0, 4);
+
         question = new Question(questionText, rightAnswer, allAnswers);
+
+        foreach (var item in question.allAnswers)
+        {
+            print(item);
+        }
     }
 
     void applyQuestionText()
@@ -63,12 +76,13 @@ public class questionTray : MonoBehaviour
 
     void applyPlatformTags()
     {
-        foreach (GameObject platform in platforms)
+        print("boop");
+        foreach (GameObject platform in platforms)      // tag all platforms as wrong
         {
             platform.tag = tagWrong;
         }
-        int rightAnswerIndex = Array.Find<int>(answerOrder, i => answerOrder[i] == 0);
-        platforms[rightAnswerIndex].tag = tagRight;
+        int rightAnswerIndex = Array.Find<int>(answerOrder, i => answerOrder[i] == 0);  // find the platform that the first answer (originally indexed 0) was mapped to
+        platforms[rightAnswerIndex].tag = tagRight;                                     // and tag it as right
     }
 
     // Update is called once per frame
@@ -92,6 +106,7 @@ public class questionTray : MonoBehaviour
         gameObject.SetActive(!gameObject.activeSelf);
     }
 
+    [System.Serializable]
     private class Question
     {
         public string questionText;
@@ -103,6 +118,27 @@ public class questionTray : MonoBehaviour
             this.questionText = questionText;
             this.rightAnswer = rightAnswer;
             this.allAnswers = allAnswers;
+        }
+
+        public static Question CreateFromJSON(string jsonString)
+        {
+            return JsonUtility.FromJson<Question>(jsonString);
+        }
+    }
+
+    [System.Serializable]
+    private class QuestionList
+    {
+        public string[] allQuestions;
+
+        public QuestionList(string[] allQuestions)
+        {
+            this.allQuestions = allQuestions;
+        }
+        
+        public static QuestionList CreateFromJSON(string jsonString)
+        {
+            return JsonUtility.FromJson<QuestionList>(jsonString);
         }
     }
 
