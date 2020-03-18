@@ -100,7 +100,7 @@ public class movementScript : MonoBehaviour
                     print("dead");
                     Invoke("ReloadScene", levelLoadDelay);
                     break;
-                case "obstacle":
+                case "Obstacle":
                     state = State.Dead;
                     print("dead");
                     Invoke("ReloadScene", levelLoadDelay);

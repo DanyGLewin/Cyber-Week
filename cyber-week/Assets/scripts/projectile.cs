@@ -21,7 +21,7 @@ public class projectile : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + movementvector*Time.deltaTime;
-        if (transform.position.x <= xBorder);
+        if (transform.position.x <= xBorder)
         {
             print(transform.position);
             transform.position = startingPos;
