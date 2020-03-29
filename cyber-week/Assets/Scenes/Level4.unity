@@ -1139,12 +1139,18 @@ PrefabInstance:
     - target: {fileID: 7407827532118092432, guid: f3e4ae88b33c14955ae76859dcfba59c,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 40
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 7407827532321658650, guid: f3e4ae88b33c14955ae76859dcfba59c,
         type: 3}
       propertyPath: m_Text
-      value: 
+      value: "\u05EA\u05D8\u05DC\u05EA\u05E9\u05DE\u05E9 \u05D4\u05E0\u05DB\u05D5\u05EA\n\u05EA\u05D5\u05D3\u05D5\u05E7\u05E4
+        \u05DC\u05DB \u05DC\u05E2 \n\u05D1\u05E9\u05D7\u05DE\u05D4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407827532321658650, guid: f3e4ae88b33c14955ae76859dcfba59c,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 7407827532338405099, guid: f3e4ae88b33c14955ae76859dcfba59c,
         type: 3}
@@ -1156,7 +1162,7 @@ PrefabInstance:
     - target: {fileID: 7407827532338405099, guid: f3e4ae88b33c14955ae76859dcfba59c,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 40
+      value: 38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3e4ae88b33c14955ae76859dcfba59c, type: 3}
