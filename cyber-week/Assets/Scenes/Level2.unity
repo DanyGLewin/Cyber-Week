@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -148,26 +149,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6089827098134241762, guid: f3e4ae88b33c14955ae76859dcfba59c,
+    - target: {fileID: 35215335171312052, guid: f3e4ae88b33c14955ae76859dcfba59c,
         type: 3}
-      propertyPath: platforms.Array.data[0]
-      value: 
-      objectReference: {fileID: 232303374}
-    - target: {fileID: 6089827098134241762, guid: f3e4ae88b33c14955ae76859dcfba59c,
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 252105452239030008, guid: f3e4ae88b33c14955ae76859dcfba59c,
         type: 3}
-      propertyPath: platforms.Array.data[1]
-      value: 
-      objectReference: {fileID: 347918194}
-    - target: {fileID: 6089827098134241762, guid: f3e4ae88b33c14955ae76859dcfba59c,
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407827530760502080, guid: f3e4ae88b33c14955ae76859dcfba59c,
         type: 3}
-      propertyPath: platforms.Array.data[2]
-      value: 
-      objectReference: {fileID: 171408152}
-    - target: {fileID: 6089827098134241762, guid: f3e4ae88b33c14955ae76859dcfba59c,
+      propertyPath: m_Text
+      value: "?\u05D2\u05E0\u05D9\u05E9\u05D9\u05E4 \u05EA\u05E4\u05E7\u05EA\u05D4
+        \u05D9\u05D4\u05DE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407827531192258773, guid: f3e4ae88b33c14955ae76859dcfba59c,
         type: 3}
-      propertyPath: platforms.Array.data[3]
-      value: 
-      objectReference: {fileID: 1717525279}
+      propertyPath: m_Text
+      value: "\u05D1\u05E9\u05D7\u05DE\u05DC \u05DD\u05E8\u05D5\u05D2\u05E9 \u05E1\u05D5\u05E8\u05D9\u05D5\n\u05DD\u05D9\u05D2\u05D3
+        \u05DC\u05E9 \u05D7\u05D9\u05E8 \u05EA\u05D5\u05DC\u05E2\u05D4\u05DC"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407827531192258773, guid: f3e4ae88b33c14955ae76859dcfba59c,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 7407827531837842674, guid: f3e4ae88b33c14955ae76859dcfba59c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -277,6 +285,45 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Questions
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407827532118092432, guid: f3e4ae88b33c14955ae76859dcfba59c,
+        type: 3}
+      propertyPath: m_Text
+      value: ",\u05DD\u05D9\u05DE\u05EA \u05D4\u05D0\u05E8\u05E0\u05E9 \u05E5\u05D1\u05D5\u05E7\n\u05E1\u05D5\u05E8\u05D9\u05D5
+        \u05DC\u05D9\u05DB\u05DE \u05DC\u05D1\u05D0\n\u05D4\u05DC\u05D2\u05D5\u05E8
+        \u05EA\u05E0\u05DB\u05D5\u05EA \u05D5\u05D0 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407827532118092432, guid: f3e4ae88b33c14955ae76859dcfba59c,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407827532321658650, guid: f3e4ae88b33c14955ae76859dcfba59c,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u05EA\u05D5\u05E2\u05D3\u05D5\u05D4 \u05EA\u05D7\u05DC\u05D5\u05E9\u05E9
+        \u05D4\u05E4\u05E7\u05EA\u05D4\n\u05D9\u05D6\u05DB\u05E8\u05DE \u05EA\u05E8\u05E9\u05DC
+        \u05EA\u05D5\u05D1\u05E8\n\u05EA\u05D5\u05E8\u05D1\u05D7\u05EA\u05D4 \u05E2\u05D5\u05E0\u05DE\u05DC
+        \u05D4\u05E8\u05D8\u05DE\u05D1\n\u05DD\u05D9\u05D9\u05EA\u05D9\u05DE\u05D0
+        \u05DD\u05D9\u05E9\u05DE\u05EA\u05E9\u05DE \u05DC\u05E9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407827532321658650, guid: f3e4ae88b33c14955ae76859dcfba59c,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407827532338405099, guid: f3e4ae88b33c14955ae76859dcfba59c,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u05E3\u05D9\u05D5\u05D6\u05DE \u05EA\u05D5\u05E8\u05D9\u05E9 \u05D5\u05D0
+        \u05E8\u05EA\u05D0\n,\u05D9\u05EA\u05D9\u05DE\u05D0\u05DC \u05D4\u05D6\u05D7\u05EA\u05DE\u05E9\n\u05DD\u05D9\u05D8\u05E8\u05E4
+        \u05EA\u05D5\u05DC\u05D2\u05DC \u05D4\u05E8\u05D8\u05DE\u05D1\n\u05EA\u05D5\u05D0\u05DE\u05E1\u05D9\u05E1
+        \u05D5\u05D0"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407827532338405099, guid: f3e4ae88b33c14955ae76859dcfba59c,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3e4ae88b33c14955ae76859dcfba59c, type: 3}
@@ -1096,7 +1143,7 @@ PrefabInstance:
     - target: {fileID: 4469739106741051800, guid: 81c0f41121b03495193076db608e06c0,
         type: 3}
       propertyPath: m_TagString
-      value: wrong_answer
+      value: right_answer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81c0f41121b03495193076db608e06c0, type: 3}
