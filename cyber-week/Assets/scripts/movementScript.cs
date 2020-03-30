@@ -36,12 +36,13 @@ public class movementScript : MonoBehaviour
     private void FixRotationPosition()
     {
         float ms = Time.time % 1;
-        if (ms < 0.1) {
+        if (ms < 0.1)
+        {
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             float zRotation = transform.rotation.eulerAngles.z;
             transform.rotation = Quaternion.Euler(0, 0, zRotation);
         }
-        
+
     }
 
     private void RespondToRotateInput()
@@ -49,11 +50,11 @@ public class movementScript : MonoBehaviour
 
         float rotationthisframe = rcsrotate * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) // get key returns boolean 
         {
             ManualRotate(rotationthisframe);
         }
-        else if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             ManualRotate(-rotationthisframe);
         }
@@ -71,7 +72,7 @@ public class movementScript : MonoBehaviour
     private void RespondToThrustInput()
     {
         float thrustthisframe = rcsthrust * Time.deltaTime;
-        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             applythrust(thrustthisframe);
         }
@@ -92,7 +93,7 @@ public class movementScript : MonoBehaviour
             switch (collision.gameObject.tag)
             {
                 case "right_answer":
-                    print ("landing");
+                    print("landing");
                     Landing();
                     break;
                 case "wrong_answer":
